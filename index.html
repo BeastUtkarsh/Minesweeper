@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Minesweeper.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
+    <title>Minesweeper</title>
+</head>
+<body>
+    <h1 text_align = "center">MINESWEEPER</h1>
+    <div class="top">
+        <div>
+            <span class="toggleContainer">
+                <img src="minesweeper_03.png" alt="" class="toggleFlag">
+                <label class="switch toggle">
+                    <input type="checkbox" id="toggler">
+                    <span class="slider round"></span>
+                </label>
+                <img src="minesweeper_02.png" alt="" class="toggleMine">
+            </span>
+        </div>
+    </div>
+    <div class="board">
+        <div class="row">
+            <input id="00" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('00')">
+            <input id="01" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('01')">
+            <input id="02" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('02')">
+            <input id="03" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('03')">
+            <input id="04" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('04')">
+            <input id="05" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('05')">
+            <input id="06" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('06')">
+            <input id="07" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('07')">
+            <input id="08" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('08')">
+        </div>
+        <div class="row">
+            <input id="10" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('10')">
+            <input id="11" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('11')">
+            <input id="12" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('12')">
+            <input id="13" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('13')">
+            <input id="14" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('14')">
+            <input id="15" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('15')">
+            <input id="16" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('16')">
+            <input id="17" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('17')">
+            <input id="18" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('18')">
+        </div>
+        <div class="row">
+            <input id="20" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('20')">
+            <input id="21" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('21')">
+            <input id="22" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('22')">
+            <input id="23" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('23')">
+            <input id="24" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('24')">
+            <input id="25" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('25')">
+            <input id="26" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('26')">
+            <input id="27" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('27')">
+            <input id="28" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('28')">
+        </div>
+        <div class="row">
+            <input id="30" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('30')">
+            <input id="31" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('31')">
+            <input id="32" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('32')">
+            <input id="33" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('33')">
+            <input id="34" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('34')">
+            <input id="35" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('35')">
+            <input id="36" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('36')">
+            <input id="37" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('37')">
+            <input id="38" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('38')">
+        </div>
+        <div class="row">
+            <input id="40" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('40')">
+            <input id="41" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('41')">
+            <input id="42" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('42')">
+            <input id="43" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('43')">
+            <input id="44" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('44')">
+            <input id="45" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('45')">
+            <input id="46" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('46')">
+            <input id="47" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('47')">
+            <input id="48" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('48')">
+        </div>
+        <div class="row">
+            <input id="50" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('50')">
+            <input id="51" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('51')">
+            <input id="52" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('52')">
+            <input id="53" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('53')">
+            <input id="54" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('54')">
+            <input id="55" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('55')">
+            <input id="56" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('56')">
+            <input id="57" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('57')">
+            <input id="58" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('58')">
+        </div>
+        <div class="row">
+            <input id="60" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('60')">
+            <input id="61" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('61')">
+            <input id="62" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('62')">
+            <input id="63" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('63')">
+            <input id="64" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('64')">
+            <input id="65" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('65')">
+            <input id="66" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('66')">
+            <input id="67" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('67')">
+            <input id="68" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('68')">
+        </div>
+        <div class="row">
+            <input id="70" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('70')">
+            <input id="71" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('71')">
+            <input id="72" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('72')">
+            <input id="73" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('73')">
+            <input id="74" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('74')">
+            <input id="75" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('75')">
+            <input id="76" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('76')">
+            <input id="77" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('77')">
+            <input id="78" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('78')">
+        </div>
+        <div class="row">
+            <input id="80" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('80')">
+            <input id="81" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('81')">
+            <input id="82" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('82')">
+            <input id="83" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('83')">
+            <input id="84" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('84')">
+            <input id="85" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('85')">
+            <input id="86" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('86')">
+            <input id="87" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('87')">
+            <input id="88" type="image" src="minesweeper_00.png" width="5%" height="5%" onclick="changePlayerBoard('88')">
+        </div>
+        
+    </div>
+    <p id="result_text"></p>
+    <button id = "bt" type="button" onclick="reset()">RESET</button>
+    <script src="Minesweeper.js"></script>
+</body>
+</html>
