@@ -18,7 +18,7 @@ var visited = []
 var numberboard = []
 var flags = []
 var SIDE = 9
-var MINES = 10
+var MINES = 15
 var moves = 0
 var visitcount = 0
 var flagcount = 0
@@ -129,21 +129,20 @@ function changePlayerBoard(idd) {
    }
    if(visited[idd[0]][idd[1]] == false && gameover == false) {
       if(moves == 0 || flagcount >= MINES) check = false
-      if(realBoard[idd[0]][idd[1]] == true && check == false) {
-         if(moves == 0) {
-            do {
-               realBoard[idd[0]][idd[1]] = false
-               setMine();
-            }while(realBoard[idd[0]][idd[1]] == true);
-            createNumberboard();
-         }
-         else {
-            gameover = true;
-            document.getElementById(ids[idd[0]][idd[1]]).src = "minesweeper_06.png"
-            loseBoard(idd[0],idd[1])
-            document.getElementById("result_text").innerHTML = "YOU LOSE !!!"
-            return
-         }
+      if(moves == 0) {
+         // do {
+         //    realBoard[idd[0]][idd[1]] = false
+         //    setMine();
+         // }while(realBoard[idd[0]][idd[1]] == true);
+         firstTime(parseInt(idd[0]),parseInt(idd[1]))
+         createNumberboard();
+      }
+      else if(realBoard[idd[0]][idd[1]] == true && check == false) {
+         gameover = true;
+         document.getElementById(ids[idd[0]][idd[1]]).src = "minesweeper_06.png"
+         loseBoard(idd[0],idd[1])
+         document.getElementById("result_text").innerHTML = "YOU LOSE !!!"
+         return
       }
       if(check) {
          currentElement.src = flag
@@ -185,8 +184,10 @@ function loseBoard(a,b) {
       }
    }
 }
-function firstTimeOnly() {
-
+function firstTime(x,y) {
+   while((x>0 && y>0 && realBoard[x-1][y-1] == true) || (x>0 && realBoard[x-1][y]==true) || (x>0 && y<SIDE-1 && realBoard[x-1][y+1] == true) || (y>0 && realBoard[x][y-1] == true) || (realBoard[x][y] == true) || (y<SIDE-1 && realBoard[x][y+1] == true) || (x<SIDE-1 && y>0 && realBoard[x+1][y-1] == true) || (x<SIDE-1 && realBoard[x+1][y] == true) || (x<SIDE-1 && y<SIDE-1 && realBoard[x+1][y+1] == true)) {
+      createBoard()
+   }
 }
 function reset() {
    createBoard()
