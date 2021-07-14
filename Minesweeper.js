@@ -113,12 +113,13 @@ function adjacent(i,j) {
          adjacent(i+1,j+1);
       }
    }
+   else return
 }
 function changePlayerBoard(idd) {
    var checkBox = document.getElementById("toggler")
    var check = checkBox.checked
    var currentElement = document.getElementById(idd)
-   if(check == false && flags[idd[0]][idd[1]] == true) {
+   if(check == false && flags[idd[0]][idd[1]] == true && gameover == false) {
       visited[idd[0]][idd[1]] = false
       flags[idd[0]][idd[1]] = false
       if(realBoard[idd[0]][idd[1]] == false) visitcount--;
@@ -151,7 +152,7 @@ function changePlayerBoard(idd) {
          if(realBoard[idd[0]][idd[1]] == false) visitcount++
          flagcount++
       }
-      adjacent(idd[0],idd[1]);
+      adjacent(parseInt(idd[0]),parseInt(idd[1]));
       moves++;
       if(visitcount == (SIDE*SIDE - MINES)) {
          gameover = true;
@@ -183,6 +184,9 @@ function loseBoard(a,b) {
          else document.getElementById(ids[i][j]).src = "minesweeper_01.png"
       }
    }
+}
+function firstTimeOnly() {
+
 }
 function reset() {
    createBoard()
