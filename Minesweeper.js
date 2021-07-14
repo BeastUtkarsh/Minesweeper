@@ -122,7 +122,7 @@ function changePlayerBoard(idd) {
    if(check == false && flags[idd[0]][idd[1]] == true && gameover == false) {
       visited[idd[0]][idd[1]] = false
       flags[idd[0]][idd[1]] = false
-      if(realBoard[idd[0]][idd[1]] == false) visitcount--;
+      // if(realBoard[idd[0]][idd[1]] == false) visitcount--;
       flagcount--;
       currentElement.src = empty
       return
@@ -149,7 +149,7 @@ function changePlayerBoard(idd) {
          currentElement.src = flag
          visited[idd[0]][idd[1]] = true
          flags[idd[0]][idd[1]] = true
-         if(realBoard[idd[0]][idd[1]] == false) visitcount++
+         // if(realBoard[idd[0]][idd[1]] == false) visitcount++
          flagcount++
       }
       adjacent(parseInt(idd[0]),parseInt(idd[1]));
