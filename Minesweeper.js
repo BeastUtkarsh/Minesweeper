@@ -128,7 +128,8 @@ function changePlayerBoard(idd) {
       return
    }
    if(visited[idd[0]][idd[1]] == false && gameover == false) {
-      if(moves == 0 || flagcount >= MINES) check = false
+      // if(moves == 0 || flagcount >= MINES) check = false
+      if(moves == 0) check = false
       if(moves == 0) {
          // do {
          //    realBoard[idd[0]][idd[1]] = false
