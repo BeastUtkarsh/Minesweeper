@@ -107,20 +107,22 @@ body {
 
 @media screen and (max-width: 480px) {
     .toggleFlag {
-        margin-left: 23%;
+        margin-left: 20%;
         position: absolute;
         bottom: 81%;
     }
     .toggle {
-        margin-left: 40%;
+        margin-left: 35%;
+        position: absolute;
+        bottom: 81%;
     }
     .toggleMine {
-        margin-left: 5%;
+        margin-left: 62%;
         position: absolute;
         bottom: 81%;
     }
     .board {
-        margin-top: 10%;
+        margin-top: 25%;
         margin-left: 0%;
     }
 
